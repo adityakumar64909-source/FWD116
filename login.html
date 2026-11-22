@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in | Campus Connect</title>
+    <link rel="stylesheet" href="./landing.css">
+    <link rel="stylesheet" href="./auth.css">
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body class="login-page">
+    <header class="nav">
+        <a class="logo" href="index.html"><span class="mark">C</span><span>Campus <span>Connect</span><small>UNIVERSITY
+                    MOBILITY PLATFORM</small></span></a>
+        <a class="nav-cta" href="index.html">Back to home ↗</a>
+    </header>
+    <main class="login-wrap">
+        <section class="login-panel">
+            <span class="eyebrow">CAMPUS CONNECT ACCOUNT</span>
+            <h1>Welcome back.</h1>
+            <p>Sign in with the email address and password you used when creating your account.</p>
+            <form id="login-form">
+                <label>Email address<input id="login-email" type="email" autocomplete="username" maxlength="254"
+                        placeholder="name@university.edu" required></label>
+                <label>Password<input id="login-password" type="password" autocomplete="current-password"
+                        placeholder="Enter your password" required></label>
+                <fieldset class="role-choice">
+                    <legend>Select your role</legend><label><input type="checkbox" name="portal-role" value="student">
+                        Student</label><label><input type="checkbox" name="portal-role" value="provider"> Service
+                        provider</label><label><input type="checkbox" name="portal-role" value="admin"> Admin</label>
+                </fieldset>
+                <p id="login-error" class="login-error" role="alert"></p>
+                <button class="primary login-submit" type="submit">Sign in →</button>
+            </form>
+            <div class="register-links"><b>New to Campus Connect?</b>
+                <p>Create an account using your email address and choose a password.</p><a class="primary"
+                    href="register.html">Create account</a>
+            </div>
+            <div class="login-note"><b>Local project account</b><small>Your account is saved in this browser
+                    only.</small><small>Use the same browser and device to sign in again.</small><em>This is a classroom
+                    demo, not secure production authentication.</em></div>
+        </section>
+        <aside class="login-aside">
+            <div class="login-orbit">C</div><span class="eyebrow">ONE CONNECTED NETWORK</span>
+            <h2>Every role.<br>One campus.</h2>
+            <p>Campus routes, vehicle assignments, trip operations and service requests stay connected in one place.</p>
+        </aside>
+    </main>
+    <script src="auth.js"></script>
+</body>
+
+</html>
