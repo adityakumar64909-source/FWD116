@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Service Provider Portal | Campus Connect</title>
+    <link rel="stylesheet" href="../css/./style.css">
+    <link rel="stylesheet" href="../css/./provider.css">
+    <link rel="stylesheet" href="../css/./auth.css">
+    <link rel="stylesheet" href="../css/./portal-pages.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">C</span><span>Campus <span
+                        class="brand-light">Connect</span><small>PROVIDER OPERATIONS</small></span></a>
+            <div class="side-label">PROVIDER WORKSPACE</div>
+            <nav><a class="active" href="#overview"><span>▦</span> Overview</a><a
+                    href="provider-routes.html"><span>⌁</span> Assigned routes</a><a
+                    href="provider-trips.html"><span>◷</span> Trip operations</a><a href="#vehicles"><span>▣</span>
+                    Fleet &amp; vehicles</a><a href="#reports"><span>⚑</span> Report an issue</a><a
+                    href="provider-notifications.html"><span>◉</span> Notifications</a></nav>
+            <div class="sidebar-bottom">
+                <div class="help-card">
+                    <div class="help-icon">?</div><b>Transport office</b>
+                    <p>Contact the university transport administrator for assignment changes.</p><a
+                        href="mailto:transport@university.edu">Contact office ↗</a>
+                </div>
+                <div class="profile-mini">
+                    <div class="avatar">MT</div>
+                    <div><b id="side-provider">MetroTransit Services</b><small>Service provider</small></div>
+                </div>
+            </div>
+        </aside>
+        <main class="main" id="overview">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">SERVICE PARTNER OPERATIONS</div>
+                    <h1>Provider dashboard</h1>
+                </div>
+                <div class="top-actions"><span class="live"><i></i> SHARED OPERATIONS</span><a class="text-link"
+                        href="index.html">Portal ↗</a>
+                    <div class="avatar">MT</div>
+                </div>
+            </header>
+            <section class="welcome provider-welcome">
+                <div><span class="eyebrow light">SERVICE PARTNER WORKSPACE</span>
+                    <h2>Good day, <span id="provider-greeting">MetroTransit</span>.</h2>
+                    <p>Manage assigned vehicles and journeys, keep trip information current and report operational
+                        issues to the transport office.</p>
+                </div><span class="provider-pill">VERIFIED DEMO PARTNER</span>
+            </section>
+            <section class="provider-profile-strip">
+                <div><small>PROVIDER ID</small><b id="provider-id">PRV-001</b></div>
+                <div><small>COMPANY</small><b id="provider-name">MetroTransit Services</b></div>
+                <div><small>ASSIGNED ROUTES</small><b id="provider-route-count">2 routes</b></div>
+                <div><small>OPERATING BUSES</small><b id="provider-bus-count">2 vehicles</b></div>
+            </section>
+            <section class="stat-grid">
+                <article class="stat-card">
+                    <div class="stat-top"><span>Assigned routes</span><span class="stat-icon blue">⌁</span></div><strong
+                        id="stat-routes">2</strong>
+                    <div class="stat-foot">Routes assigned by admin</div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top"><span>Assigned vehicles</span><span class="stat-icon purple">▣</span></div>
+                    <strong id="stat-vehicles">2</strong>
+                    <div class="stat-foot">Vehicles in your service group</div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top"><span>Trips in log</span><span class="stat-icon green">◷</span></div><strong
+                        id="stat-trips">0</strong>
+                    <div class="stat-foot">Visible assigned-route records</div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top"><span>Open reports</span><span class="stat-icon orange">⚑</span></div><strong
+                        id="stat-reports">0</strong>
+                    <div class="stat-foot">Awaiting transport office review</div>
+                </article>
+            </section>
+            <section class="content-grid" id="assigned-routes">
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Assigned route schedule</h3>
+                            <p>Read-only route details published by the transport administrator</p>
+                        </div><span class="tiny-tag">ADMIN SYNC</span>
+                    </div>
+                    <div class="provider-route-list" id="provider-route-list">
+                        <p class="muted">Loading assigned routes…</p>
+                    </div>
+                </article>
+                <article class="panel" id="notices">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Operational notifications</h3>
+                            <p>Notices for providers and your assigned routes</p>
+                        </div><span class="count-pill" id="provider-notice-count">0 updates</span>
+                    </div>
+                    <div class="announcement-list" id="provider-notice-list">
+                        <p class="muted">No notifications yet.</p>
+                    </div>
+                </article>
+            </section>
+            <section class="panel" id="trip-operations">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Trip operations</h3>
+                        <p>Only trips on routes assigned to this provider are shown. Update progress to sync with admin
+                            trip logs.</p>
+                    </div><button class="btn btn-primary" type="button" onclick="openProviderTripModal()">＋ Add trip
+                        record</button>
+                </div>
+                <div class="table-wrap">
+                    <table id="provider-trips-table">
+                        <thead>
+                            <tr>
+                                <th>TRIP ID</th>
+                                <th>ROUTE / BUS</th>
+                                <th>DRIVER</th>
+                                <th>DEPARTURE</th>
+                                <th>ARRIVAL</th>
+                                <th>STATUS</th>
+                                <th>UPDATE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="7">Loading trip records…</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="panel" id="vehicles">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Assigned fleet</h3>
+                        <p>Vehicle and driver assignments visible to this service partner</p>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>VEHICLE</th>
+                                <th>DRIVER</th>
+                                <th>ASSIGNED ROUTE</th>
+                                <th>OPERATIONAL STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="provider-vehicle-rows"></tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="content-grid" id="reports">
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Report vehicle or service issue</h3>
+                            <p>Send maintenance, breakdown or route-operation reports to the transport office.</p>
+                        </div><span class="stat-icon orange">⚑</span>
+                    </div>
+                    <form class="provider-form" onsubmit="submitProviderReport(event)"><label>Issue category<select
+                                id="report-kind">
+                                <option>Vehicle maintenance</option>
+                                <option>Breakdown / roadside support</option>
+                                <option>Driver availability</option>
+                                <option>Route obstruction</option>
+                                <option>Schedule conflict</option>
+                                <option>Other operational issue</option>
+                            </select></label><label>Related route<select id="report-route"
+                                required></select></label><label>Vehicle number<input id="report-bus"
+                                placeholder="e.g. BUS-101"></label><label>Issue details<textarea id="report-details"
+                                rows="4" maxlength="700"
+                                placeholder="Describe the issue, location and operational impact…"
+                                required></textarea></label><button class="btn btn-primary" type="submit">Submit report
+                            ↗</button></form>
+                </article>
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>My submitted reports</h3>
+                            <p>Track the review status of your service reports</p>
+                        </div>
+                    </div>
+                    <div id="provider-my-reports" class="provider-report-list">
+                        <p class="muted">No reports submitted yet.</p>
+                    </div>
+                </article>
+            </section>
+            <footer>© 2026 Campus Connect · Service Provider Portal <span>Assigned operations only · Shared trip
+                    updates</span></footer>
+        </main>
+    </div>
+    <div class="modal-backdrop" id="provider-trip-modal">
+        <div class="modal"><button class="modal-close" onclick="closeProviderTripModal()">×</button>
+            <h3>Add trip record</h3>
+            <p>New records are added to the shared administrator trip log.</p>
+            <form onsubmit="submitProviderTrip(event)"><label>Assigned route<select id="new-trip-route"
+                        required></select></label><label>Vehicle<input id="new-trip-bus" placeholder="e.g. BUS-101"
+                        required></label><label>Driver name<input id="new-trip-driver" placeholder="Driver name"
+                        required></label><label>Departure time<input id="new-trip-departure" type="time"
+                        required></label><label>Arrival time<input id="new-trip-arrival" type="time"></label><label>Trip
+                    status<select id="new-trip-status">
+                        <option>Scheduled</option>
+                        <option>In progress</option>
+                        <option>Completed</option>
+                        <option>Delayed</option>
+                        <option>Cancelled</option>
+                    </select></label><button class="btn btn-primary full-btn" type="submit">Save trip record</button>
+            </form>
+        </div>
+    </div>
+    <div id="provider-toast" role="status"></div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/provider.js"></script>
+    <script src="../js/map-shared.js"></script>
+</body>
+
+</html>

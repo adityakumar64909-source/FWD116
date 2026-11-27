@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Notifications | Campus Connect</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/portal-pages.css">
+</head>
+
+<body data-role="student">
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">C</span><span>Campus <span
+                        class="brand-light">Connect</span><small>SOUTH ASIAN UNIVERSITY · MOBILITY</small></span></a>
+            <div class="side-label">PASSENGER WORKSPACE</div>
+            <nav><a href="student.html">▦ Overview</a><a href="student-routes.html">⌁ My routes</a><a
+                    href="student-notifications.html">◉ Notifications</a><a href="student-bookings.html">▣ Bookings</a>
+            </nav>
+            <div class="sidebar-bottom">
+                <div class="help-card">
+                    <div class="help-icon">?</div><b>Transport helpdesk</b>
+                    <p>Use the portal to send a message to the transport team.</p><a
+                        href="mailto:transport@university.edu">Get support ↗</a>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">STUDENT PORTAL</div>
+                    <h1>Notifications</h1>
+                </div>
+                <div class="top-actions"><span class="live"><i></i> LOCAL DEMO</span><a class="text-link"
+                        href="index.html">Portal ↗</a></div>
+            </header>
+            <div class="page-intro">
+                <div>
+                    <h2>Announcements and service messages</h2>
+                    <p>Read transport updates and send a message or complaint to the admin team.</p>
+                </div>
+            </div>
+            <div class="portal-subnav"><a href="student-routes.html" class="">My routes</a><a
+                    href="student-notifications.html" class="active">Notifications</a><a href="student-bookings.html"
+                    class="">Bookings & requests</a></div>
+            <div id="portal-notice-list"></div>
+            <section class="panel" style="margin-top:22px;padding:22px">
+                <h3>Message the transport office</h3>
+                <form id="portal-message-form" class="portal-message-form"><label>Message type<select
+                            id="portal-message-type">
+                            <option>Question</option>
+                            <option>Complaint</option>
+                            <option>Route feedback</option>
+                            <option>Lost property</option>
+                        </select></label><label>Route<select id="portal-message-route">
+                            <option>All routes</option>
+                            <option>R1</option>
+                            <option>R2</option>
+                            <option>R3</option>
+                        </select></label><label>Message<textarea id="portal-message-text" rows="4"
+                            required></textarea></label><button>Send to Admin</button><small
+                        id="portal-message-status"></small></form>
+            </section>
+            <footer>© 2026 Campus Connect · Browser-based project demonstration</footer>
+        </main>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/portal-pages.js"></script>
+</body>
+
+</html>

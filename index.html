@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus Connect is South Asian University's digital mobility platform connecting students, faculty and staff with campus shuttles, metro stations and public transport hubs.">
+  <title>Campus Connect | South Asian University Mobility</title>
+  <link rel="stylesheet" href="../css/./landing.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Campus Connect home"><span class="brand-symbol">CC</span><span class="brand-name">Campus<span>Connect</span><small> SOUTH ASIAN UNIVERSITY · MOBILITY</small></span></a>
+    <nav class="main-nav" id="main-nav"><a href="#about">About</a><a href="#services">Services</a><a href="#network">Route network</a><a href="#portals">Portals</a></nav>
+    <div class="header-actions"><a class="sign-in" href="login.html">Sign in <span>↗</span></a><a class="header-register" href="register.html">Create account</a></div>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="const n=document.getElementById('main-nav');n.classList.toggle('is-open');this.setAttribute('aria-expanded',n.classList.contains('is-open'))">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-content">
+        <div class="overline"><span class="pulse"></span> SOUTH ASIAN UNIVERSITY · NEW DELHI</div>
+        <h1>Your campus.<br><span>Your city.</span><br>Connected.</h1>
+        <p class="hero-lead">A smarter first- and last-mile transportation network for students, faculty and staff — connecting South Asian University with metro stations, bus terminals, railway links and destinations across the city.</p>
+        <div class="hero-buttons"><a class="button button-primary" href="login.html">Access your portal <span>→</span></a><a class="button button-quiet" href="#network">Explore connections <span>↘</span></a></div>
+        <div class="hero-proof"><span>Campus shuttle services</span><span>Digital seat reservations</span><span>Service updates in one place</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-topline"><span>THE CAMPUS CONNECT NETWORK</span><span class="demo-status"><i></i> PLATFORM OVERVIEW</span></div>
+        <div class="network-illustration">
+          <div class="map-grid"></div>
+          <svg class="route-lines" viewBox="0 0 620 430" preserveAspectRatio="xMidYMid meet" aria-label="Illustration of campus shuttle connections to public transport destinations">
+            <path class="route route-blue" d="M104 218 C175 218 175 115 275 115 S390 165 486 94"/>
+            <path class="route route-green" d="M104 218 C190 218 195 325 300 325 S415 265 518 330"/>
+            <path class="route route-orange" d="M104 218 C205 218 220 218 310 218 S405 205 510 205"/>
+            <g class="station campus"><circle cx="104" cy="218" r="15"/><circle cx="104" cy="218" r="5"/></g>
+            <g class="station"><circle cx="275" cy="115" r="11"/><circle cx="275" cy="115" r="4"/></g>
+            <g class="station"><circle cx="486" cy="94" r="11"/><circle cx="486" cy="94" r="4"/></g>
+            <g class="station"><circle cx="300" cy="325" r="11"/><circle cx="300" cy="325" r="4"/></g>
+            <g class="station"><circle cx="518" cy="330" r="11"/><circle cx="518" cy="330" r="4"/></g>
+            <g class="station"><circle cx="510" cy="205" r="11"/><circle cx="510" cy="205" r="4"/></g>
+          </svg>
+          <div class="map-label label-campus"><b>SAU CAMPUS</b><small>University hub</small></div>
+          <div class="map-label label-metro"><b>METRO STATION</b><small>Rail connection</small></div>
+          <div class="map-label label-rail"><b>RAILWAY LINK</b><small>Regional travel</small></div>
+          <div class="map-label label-city"><b>CITY DESTINATIONS</b><small>Bus terminal · City centre</small></div>
+          <div class="route-pill pill-blue"><i></i> R1 · Metro Connector</div>
+          <div class="route-pill pill-green"><i></i> R2 · Railway Link</div>
+          <div class="route-pill pill-orange"><i></i> R3 · City Connector</div>
+          <div class="bus-marker">▰</div>
+        </div>
+        <div class="visual-caption"><span><b>01</b> University mobility hub</span><span><b>03</b> Sample route corridors</span><span><b>ONE</b> Connected platform</span></div>
+      </div>
+    </section>
+
+    <section class="mission-strip">
+      <div><span class="strip-icon">↗</span><p><b>First- and last-mile access</b><small>Make the journey to and from campus easier.</small></p></div>
+      <div><span class="strip-icon">◷</span><p><b>Clear journey information</b><small>Routes, stops, schedules and seat availability.</small></p></div>
+      <div><span class="strip-icon">◎</span><p><b>Demand-led operations</b><small>Use travel requests to plan better services.</small></p></div>
+    </section>
+
+    <section class="section-intro" id="services">
+      <div class="section-kicker">ONE PLATFORM · CONNECTED SERVICES</div>
+      <div class="section-title-row"><div><h2>Mobility that works<br><em>around your university day.</em></h2></div><p>Campus Connect brings campus shuttle operations and public transport connections into one digital experience — from discovering a route to reserving a seat and sharing service feedback.</p></div>
+      <div class="service-grid">
+        <article class="service-card service-main"><div class="service-number">01 / JOURNEY PLANNING</div><div class="service-graphic graphic-route"><span class="route-stop"></span><span class="route-track"></span><span class="route-stop end"></span><span class="graphic-tag">CAMPUS → METRO</span></div><h3>Find your connection</h3><p>Discover shuttle routes, stops, departure times and estimated travel times for campus-to-transit journeys.</p></article>
+        <article class="service-card"><div class="service-number">02 / DIGITAL BOOKING</div><div class="service-graphic graphic-seat"><div class="seat-row"><i></i><i></i><i></i></div><div class="seat-row"><i></i><i class="seat-active"></i><i></i></div><div class="seat-row"><i></i><i></i><i></i></div><span class="seat-caption">SEAT RESERVATION</span></div><h3>Reserve your seat</h3><p>Book, view or cancel a seat and check booking status and vehicle capacity information.</p></article>
+        <article class="service-card"><div class="service-number">03 / SERVICE INFORMATION</div><div class="service-graphic graphic-notice"><div class="notice-window"><span></span><b>Route update</b><small>Service information and notices</small><i>View details ↗</i></div></div><h3>Stay informed</h3><p>Receive route changes, schedule updates and service notices from the university transport team.</p></article>
+      </div>
+    </section>
+
+    <section class="network-section" id="network">
+      <div class="network-copy"><div class="section-kicker light">A CONNECTED TRANSPORT NETWORK</div><h2>From the campus gate<br>to <em>where you need to go.</em></h2><p>The platform supports free university-operated shuttle services to nearby public transport hubs, alongside university-supervised paid services on predefined high-demand corridors.</p><div class="network-legend"><span><i class="legend-blue"></i> University-operated shuttle</span><span><i class="legend-green"></i> Supervised corridor service</span></div></div>
+      <div class="destination-list">
+        <div class="destination-row"><span class="destination-code">R1</span><div><b>Metro Station Connector</b><small>Campus ↔ Nearby metro station</small></div><span class="destination-type">PUBLIC TRANSIT</span></div>
+        <div class="destination-row"><span class="destination-code green">R2</span><div><b>Railway Station Link</b><small>Campus ↔ Railway terminal</small></div><span class="destination-type">RAIL CONNECTION</span></div>
+        <div class="destination-row"><span class="destination-code orange">R3</span><div><b>City Destination Connector</b><small>Campus ↔ Bus terminal / city centre</small></div><span class="destination-type">CITY CORRIDOR</span></div>
+        <div class="network-note"><span>i</span><p>Route names and corridors shown here are illustrative examples for the platform demonstration.</p></div>
+      </div>
+    </section>
+
+    <section class="demand-section">
+      <div class="demand-visual"><div class="demand-card"><div class="demand-heading"><span>TRAVEL DEMAND INSIGHTS</span><span>ILLUSTRATIVE</span></div><div class="demand-chart"><div class="chart-y"><span>HIGH</span><span>MED</span><span>LOW</span></div><div class="chart-bars"><i style="height:34%"></i><i style="height:48%"></i><i style="height:40%"></i><i style="height:72%"></i><i style="height:91%"></i><i style="height:64%"></i><i style="height:45%"></i><i style="height:78%"></i><i style="height:57%"></i></div></div><div class="chart-labels"><span>08 AM</span><span>10 AM</span><span>12 PM</span><span>02 PM</span><span>04 PM</span></div><div class="demand-foot"><span><i></i> Travel requests by time</span><b>DEMAND PATTERN</b></div></div></div>
+      <div class="demand-copy"><div class="section-kicker">SMARTER TRANSPORT PLANNING</div><h2>Better services begin with <em>understanding demand.</em></h2><p>A demand-aggregation engine analyses travel requests to help university administrators identify high-demand routes and peak periods.</p><ul><li>Understand when and where passengers need transport.</li><li>Plan shuttle routes and service frequency.</li><li>Improve vehicle allocation and operating schedules.</li><li>Use trip records and feedback to guide decisions.</li></ul></div>
+    </section>
+
+    <section class="portal-section" id="portals"><div class="section-kicker">DESIGNED FOR THE UNIVERSITY COMMUNITY</div><div class="section-title-row"><h2>One system.<br><em>Purpose-built portals.</em></h2><p>Choose a workspace to explore the tools for students, service providers and transport administrators.</p></div>
+      <div class="portal-grid">
+        <a class="portal-card portal-admin" href="login.html"><span class="portal-symbol">⌘</span><span class="portal-label">SYSTEM MANAGEMENT</span><h3>Administrator</h3><p>Manage routes, schedules, vehicles, providers, passenger records, trip logs, service feedback and university-wide notifications.</p><span class="portal-link">Enter control centre <b>↗</b></span></a>
+        <a class="portal-card portal-passenger" href="login.html"><span class="portal-symbol">♙</span><span class="portal-label">PASSENGER PORTAL</span><h3>Students, faculty &amp; staff</h3><p>Explore connections, check estimated travel times and vehicle capacity, reserve seats, view bookings and share feedback.</p><span class="portal-link">Access passenger portal <b>↗</b></span></a>
+        <a class="portal-card portal-operations" href="login.html"><span class="portal-symbol">▤</span><span class="portal-label">SERVICE OPERATIONS</span><h3>Providers &amp; drivers</h3><p>View assigned corridors, coordinate vehicles, update trip progress and report operational or vehicle issues.</p><span class="portal-link">Access operations portal <b>↗</b></span></a>
+      </div>
+    </section>
+
+    <section class="closing-cta"><div><div class="section-kicker light">CAMPUS CONNECT · SOUTH ASIAN UNIVERSITY</div><h2>Make every campus<br><em>connection count.</em></h2><p>One digital platform for more accessible, reliable and coordinated university mobility.</p></div><a class="button button-light" href="login.html">Get started <span>→</span></a></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-symbol">CC</span><span class="brand-name">Campus<span>Connect</span><small> SOUTH ASIAN UNIVERSITY · MOBILITY</small></span></a><p>Connecting the university with the city.</p><div class="footer-links"><a href="#services">Services</a><a href="#network">Routes</a><a href="login.html">Sign in</a><a href="mailto:transport@university.edu">Contact transport office</a></div><small class="copyright">© 2026 Campus Connect · University Mobility Platform</small></footer>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

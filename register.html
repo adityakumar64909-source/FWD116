@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create account | Campus Connect</title>
+    <link rel="stylesheet" href="../css/./landing.css">
+    <link rel="stylesheet" href="../css/./auth.css">
+    <link rel="stylesheet" href="../css/./login.css">
+</head>
+
+<body class="login-page">
+    <header class="nav"><a class="logo" href="index.html"><span class="mark">C</span><span>Campus
+                <span>Connect</span><small>UNIVERSITY MOBILITY PLATFORM</small></span></a><a class="nav-cta"
+            href="login.html">Sign in ↗</a></header>
+    <main class="login-wrap register-wrap">
+        <section class="login-panel">
+            <span class="eyebrow">NEW ACCOUNT</span>
+            <h1>Create your account.</h1>
+            <p>Register with your email address and create a password for your local Campus Connect account.</p>
+            <form id="register-form">
+                <label>Registering as<select id="register-role" required>
+                        <option value="student">Student</option>
+                        <option value="provider">Service provider</option>
+                        <option value="admin">Admin</option>
+                    </select></label>
+                <label id="register-id-label">Profile ID (optional)<input id="register-id" maxlength="32"
+                        placeholder="Generated automatically"></label>
+                <label>Full name<input id="register-name" maxlength="100" autocomplete="name"
+                        placeholder="Enter your full name" required></label>
+                <label>Email address<input id="register-email" type="email" maxlength="254" autocomplete="email"
+                        placeholder="name@university.edu" required></label>
+                <label>Password<input id="register-password" type="password" minlength="8" autocomplete="new-password"
+                        placeholder="At least 8 characters" required></label>
+                <label>Confirm password<input id="register-confirm" type="password" minlength="8"
+                        autocomplete="new-password" placeholder="Enter password again" required></label>
+                <label>Department / organisation<input id="register-department" maxlength="100"
+                        placeholder="e.g. Computer Science"></label>
+                <label>Phone number<input id="register-phone" maxlength="30" type="tel" autocomplete="tel"
+                        placeholder="Contact number"></label>
+                <p id="register-message" class="login-error" role="alert"></p>
+                <button class="primary login-submit" type="submit">Create account →</button>
+            </form>
+            <p class="register-foot">Already registered? <a href="login.html">Sign in here</a>.</p>
+        </section>
+        <aside class="login-aside">
+            <div class="login-orbit">C</div><span class="eyebrow">CAMPUS CONNECT</span>
+            <h2>Your campus journey<br>starts here.</h2>
+            <p>Your account stays in this browser. No Firebase, database or server is used.</p>
+        </aside>
+    </main>
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>

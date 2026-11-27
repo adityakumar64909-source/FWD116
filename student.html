@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Campus Connect</title>
+    <link rel="stylesheet" href="../css/./style.css">
+    <link rel="stylesheet" href="../css/./student.css">
+    <link rel="stylesheet" href="../css/./auth.css">
+    <link rel="stylesheet" href="../css/./portal-pages.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">C</span><span>Campus <span
+                        class="brand-light">Connect</span><small>PASSENGER MOBILITY</small></span></a>
+            <div class="side-label">PASSENGER PORTAL</div>
+            <nav><a class="active" href="#overview"><span>▦</span> My dashboard</a><a
+                    href="student-routes.html"><span>⌁</span> My routes</a><a
+                    href="student-notifications.html"><span>◉</span> Notifications</a><a
+                    href="student-bookings.html"><span>▣</span> Bookings & requests</a><a href="#support"><span>✉</span>
+                    Complaints</a><a href="#emergency"><span>＋</span> Emergency help</a></nav>
+            <div class="sidebar-bottom">
+                <div class="help-card">
+                    <div class="help-icon">?</div><b>Transport helpdesk</b>
+                    <p>For non-emergency support, send a request through this portal.</p><a
+                        href="mailto:transport@university.edu">Email helpdesk ↗</a>
+                </div>
+                <div class="profile-mini">
+                    <div class="avatar" id="side-avatar">AS</div>
+                    <div><b id="side-name">Aarav Sharma</b><small>Passenger account</small></div>
+                </div>
+            </div>
+        </aside>
+        <main class="main" id="overview">
+            <header class="topbar">
+                <div>
+                    <div class="eyebrow">CAMPUS PASSENGER SERVICES</div>
+                    <h1>My transport dashboard</h1>
+                </div>
+                <div class="top-actions"><span class="live"><i></i> LIVE ROUTE DATA</span><a class="text-link"
+                        href="index.html">Portal ↗</a><a class="icon-btn" href="#notifications"
+                        aria-label="Notifications">♧<em id="unread-count">0</em></a>
+                    <div class="avatar" id="top-avatar">AS</div>
+                </div>
+            </header>
+            <section class="welcome student-welcome">
+                <div><span class="eyebrow light">YOUR CAMPUS JOURNEY</span>
+                    <h2>Welcome, <span id="welcome-name">there</span>.</h2>
+                    <p>Connect to campus, metro stations and city destinations. View your assigned shuttle and manage
+                        travel requests.</p>
+                </div><a class="btn btn-white" href="#booking">＋ Book a ride</a>
+            </section>
+            <section class="student-profile-strip">
+                <div><small>CAMPUS ID</small><b id="student-id">UNI2024012</b></div>
+                <div><small>DEPARTMENT</small><b id="student-department">Computer Science</b></div>
+                <div><small>TRANSPORT PASS</small><b id="pass-status"><span class="status on">Active</span></b></div>
+                <div><small>PICKUP POINT</small><b id="pickup-point">North Gate</b></div>
+                <div><small>ASSIGNED BUS</small><b id="assigned-bus">Not assigned</b></div>
+                <div><small>DRIVER</small><b id="assigned-driver">Not assigned</b></div>
+                <div><small>PROVIDER</small><b id="assigned-provider">Not assigned</b></div>
+            </section>
+            <section class="stat-grid">
+                <article class="stat-card">
+                    <div class="stat-top"><span>Assigned connection</span><span class="stat-icon blue">⌁</span></div>
+                    <strong id="my-route-code">R1</strong>
+                    <div class="stat-foot" id="my-route-name">North Campus Express</div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top"><span>Next scheduled service</span><span class="stat-icon green">◷</span>
+                    </div><strong id="next-service">07:15</strong>
+                    <div class="stat-foot" id="next-service-note">First departure · check live status</div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top"><span>New notifications</span><span class="stat-icon purple">◉</span></div>
+                    <strong id="my-notice-total">0</strong>
+                    <div class="stat-foot">Updates for your route and campus</div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top"><span>My requests</span><span class="stat-icon orange">✉</span></div><strong
+                        id="my-request-total">0</strong>
+                    <div class="stat-foot">Bookings, complaints and travel assistance requests</div>
+                </article>
+            </section>
+            <section class="content-grid" id="my-route">
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>My assigned connection</h3>
+                            <p>Schedule and stops maintained by the transport office</p>
+                        </div><span class="tiny-tag" id="route-live-status">ACTIVE</span>
+                    </div>
+                    <div class="my-route-summary">
+                        <div class="route-badge rb-blue" id="route-badge">R1</div>
+                        <div><b id="route-title">North Campus Express</b><small id="route-path">North Gate · Library ·
+                                Main Campus</small></div>
+                    </div>
+                    <div class="schedule-facts">
+                        <div><small>FIRST DEPARTURE</small><b id="route-first">07:15</b></div>
+                        <div><small>LAST DEPARTURE</small><b id="route-last">18:30</b></div>
+                        <div><small>STOPS</small><b id="route-stops">12</b></div>
+                    </div>
+                    <div class="route-status-note" id="route-status-note">Your route is operating as scheduled.</div>
+                </article>
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Quick actions</h3>
+                            <p>Common student transport services</p>
+                        </div>
+                    </div>
+                    <div class="quick-actions"><a href="#booking"><span class="qa-icon blue-bg">▣</span><span><b>Book a
+                                    ride</b><small>Request a seat for a scheduled
+                                    service</small></span><strong>→</strong></a><a href="#support"><span
+                                class="qa-icon purple-bg">✉</span><span><b>Raise a complaint</b><small>Report an issue
+                                    with your journey</small></span><strong>→</strong></a><a href="#emergency"><span
+                                class="qa-icon orange-bg">＋</span><span><b>Emergency assistance</b><small>Request urgent
+                                    campus transport help</small></span><strong>→</strong></a></div>
+                </article>
+            </section>
+            <section class="content-grid" id="notifications">
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Notifications received</h3>
+                            <p>Only campus-wide and relevant route announcements are shown</p>
+                        </div><span class="count-pill" id="notification-pill">0 updates</span>
+                    </div>
+                    <div id="student-notification-list" class="announcement-list">
+                        <p class="muted">No notifications at the moment.</p>
+                    </div>
+                </article>
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>My recent activity</h3>
+                            <p>Your bookings and submitted requests</p>
+                        </div>
+                    </div>
+                    <div id="my-activity-list" class="student-activity-list">
+                        <p class="muted">You have not submitted any requests yet.</p>
+                    </div>
+                </article>
+            </section>
+            <section class="panel booking-panel" id="booking">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Book a transport service</h3>
+                        <p>Bookings are limited to your assigned route and its published operating hours.</p>
+                    </div><span class="stat-icon blue">▣</span>
+                </div>
+                <form id="booking-form" class="student-form" onsubmit="submitBooking(event)">
+                    <div class="form-grid"><label>Assigned route<select id="booking-route"
+                                required></select></label><label>Travel date<input id="booking-date" type="date"
+                                required></label><label>Scheduled departure<select id="booking-time" required>
+                                <option value="">Choose a time</option>
+                            </select></label><label>Pickup point<select id="booking-pickup"
+                                required></select></label><label>Destination / drop point<input id="booking-drop"
+                                placeholder="e.g. Main Campus" required></label><label>Number of seats<select
+                                id="booking-seats">
+                                <option>1</option>
+                            </select></label></div><label>Additional information<textarea id="booking-notes" rows="3"
+                            maxlength="300" placeholder="Optional details for the transport team"></textarea></label>
+                    <div class="form-actions"><span class="field-hint" id="booking-hint">The route and timetable are
+                            synced with the transport office.</span><button class="btn btn-primary" type="submit">Submit
+                            booking ↗</button></div>
+                </form>
+            </section>
+            <section class="content-grid support-grid" id="support">
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Complaint / feedback</h3>
+                            <p>Report missed pickups, conduct issues, cleanliness or route concerns.</p>
+                        </div><span class="stat-icon purple">✉</span>
+                    </div>
+                    <form class="student-form" id="complaint-form" onsubmit="submitComplaint(event)"><label>Complaint
+                            category<select id="complaint-category">
+                                <option>Missed pickup</option>
+                                <option>Bus cleanliness</option>
+                                <option>Driver / staff conduct</option>
+                                <option>Route or timing issue</option>
+                                <option>Other</option>
+                            </select></label><label>Related route<select
+                                id="complaint-route"></select></label><label>When did it happen?<input
+                                id="complaint-when" type="datetime-local" required></label><label>Describe the
+                            issue<textarea id="complaint-details" rows="4" maxlength="700"
+                                placeholder="Include the stop, scheduled time and what happened..."
+                                required></textarea></label><button class="btn btn-primary" type="submit">Submit
+                            complaint</button></form>
+                </article>
+                <article class="panel" id="emergency">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Emergency assistance</h3>
+                            <p>For urgent transport-related incidents on campus.</p>
+                        </div><span class="stat-icon orange">＋</span>
+                    </div>
+                    <div class="emergency-banner"><b>Immediate danger or medical emergency?</b>
+                        <p>Contact local emergency services first. In India, call <strong>112</strong>. This portal
+                            request is not monitored as an emergency dispatch service.</p><a class="btn btn-outline"
+                            href="tel:112">Call 112</a>
+                    </div>
+                    <form class="student-form" id="emergency-form" onsubmit="submitEmergency(event)"><label>Type of
+                            assistance<select id="emergency-type">
+                                <option>Medical assistance</option>
+                                <option>Campus security escort</option>
+                                <option>Stranded / bus breakdown</option>
+                                <option>Unsafe travel situation</option>
+                                <option>Other urgent transport help</option>
+                            </select></label><label>Your current location / stop<input id="emergency-location"
+                                placeholder="e.g. East Hostel bus stop" required></label><label>Contact number<input
+                                id="emergency-phone" type="tel" placeholder="Your reachable phone number"
+                                required></label><label>What assistance is needed?<textarea id="emergency-details"
+                                rows="3" maxlength="500"
+                                placeholder="Briefly describe the situation and where help is needed..."
+                                required></textarea></label><button class="btn btn-danger" type="submit">Send assistance
+                            request</button></form>
+                </article>
+            </section>
+            <footer>© 2026 Campus Connect · Student Transport Portal <span>Personal student view · Live schedule
+                    sync</span></footer>
+        </main>
+    </div>
+    <div id="student-toast" role="status"></div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/student.js"></script>
+    <script src="../js/map-shared.js"></script>
+</body>
+
+</html>
